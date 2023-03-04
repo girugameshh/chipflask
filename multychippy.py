@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 import time
 from datetime import datetime
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import logging
 import requests
 import asyncio
@@ -165,6 +165,14 @@ def index():
     sound_names = [os.path.splitext(file)[0] for file in sound_files]
     return render_template("index.html", sound_files=sound_names)
 
+@app.route('/button-clicked', methods=['POST'])
+async def button_clicked():
+    #executable_path = "ffmpeg.exe"
+    button_name = request.form['button_name']
+    print(button_name)
+    #audio = discord.FFmpegPCMAudio(executable=executable_path, source=f"sounds/{button_name}")
+    #print(f'Playing {button_name}')
+    return '', 204
 
 intents = discord.Intents.default()
 intents.voice_states = True
