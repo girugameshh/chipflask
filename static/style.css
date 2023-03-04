@@ -1,0 +1,55 @@
+@import url("https: //fonts.googleapis.com/css2?family=Alegreya+Sans: wght@100;300;400;500;700;800;900&display=swap");
+
+* {
+ font-family: "Alegreya Sans", sans-serif
+}
+
+body {
+ background-color: black
+}
+
+h1 {
+ color: white;
+ text-align: center;
+ font-size: 50px
+}
+ #landing-div {
+ position: relative;
+ height: 90vh
+ }
+
+ .button-grid {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ display: grid;
+ grid-template-columns: repeat(10, 1fr);
+ grid-gap: 10px
+ }
+
+ .button-grid button {
+ height: 70px;
+ width: 105px;
+ padding: 0;
+ box-sizing: border-box;
+ font-size: 15px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: linear-gradient(25deg, #960ead 12%,#2e1cce99 100%);
+ color: white;
+ border-radius: 8px;
+ text-transform: uppercase;
+ cursor: pointer
+ }
+ .button-grid button:active {
+ transform: translateY(4px);
+ box-shadow: 0 5px goldenrod
+ }
+
+
+ .button-grid button:hover {
+ background: linear-gradient(54.7deg, #b6e2e20c 12%,#2e1cce 100%)
+
+ }

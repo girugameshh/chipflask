@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <title>Soundboard</title>
+</head>
+<body>
+
+    <div id="landing-div">
+        <h1>Lil Chippy Soundboard</h1>
+        <div class="button-grid">
+            {% for sound_file in sound_files %}
+                <button>{{ sound_file }}</button>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
